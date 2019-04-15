@@ -12,16 +12,18 @@ white = (255,255,255)
 
 red = (200,0,0)
 green = (0,200,0)
+blue = (0,0,225)
 
 bright_red = (255,0,0)
 bright_green = (0,255,0)
+bright_blue = (0,0,128)
 
 block_color = (53,115,255)
 
 mouse_width = 64
 
 gameDisplay = pygame.display.set_mode((display_width,display_height))
-pygame.display.set_caption('Mouse Trap')
+pygame.display.set_caption('Football Run')
 clock = pygame.time.Clock()
 
 mouseImg = pygame.image.load('ms3.png')
@@ -29,7 +31,7 @@ mouseImg = pygame.image.load('ms3.png')
 
 def things_dodged(count):
     font = pygame.font.SysFont(None, 25)
-    text = font.render("Dodged: "+str(count), True, black)
+    text = font.render("Missed Tackles: "+str(count), True, black)
     gameDisplay.blit(text,(0,0))
 
 def things(thingx, thingy, thingw, thingh, color):
@@ -55,7 +57,7 @@ def message_display(text):
     game_loop()
 
 def crash():
-    message_display('OOPS')
+    message_display('Tackled')
 
 def button(msg,x,y,w,h,ic,ac,action=None):
     mouse = pygame.mouse.get_pos()
@@ -93,14 +95,14 @@ def game_intro():
                 pygame.quit()
                 quit()
         #intro screen and how long it lasts        
-        gameDisplay.fill(white)
+        gameDisplay.fill(green)
         largeText = pygame.font.Font('freesansbold.ttf',115)
-        TextSurf, TextRect = text_objects("Mouse Trap", largeText)
+        TextSurf, TextRect = text_objects("Football Run", largeText)
         TextRect.center = ((display_width/2),(display_height/2))
         gameDisplay.blit(TextSurf, TextRect)
         #button code for start screen
-        button("Start!",150,450,100,50,green,bright_green,"play")
-        button("Quit",550,450,100,50,red,bright_red,"quit")
+        button("Start!",150,450,100,50,blue,bright_blue,"play")
+        button("Quit",550,450,100,50,bright_red,red,"quit")
 
             
 
