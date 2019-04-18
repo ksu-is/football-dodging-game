@@ -11,4 +11,4 @@ Add new button functionnallity (Play again)
 Add new button functionnallity (Quit) 
 Add icon in top of window 
 Add pause function 
-Add background music 
+
