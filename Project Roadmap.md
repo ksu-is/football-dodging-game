@@ -11,4 +11,4 @@
 -[x] Add new button functionnallity after crash (Quit) 
 -[x] Add icon in top of window 
 -[x] Add pause function 
-Add highscore counter
+-[x] Add highscore counter
