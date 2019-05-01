@@ -226,7 +226,7 @@ def game_loop():
 
 
         pygame.display.update()
-        clock.tick(30)
+        clock.tick(40)
 
 game_intro()
 game_loop()
